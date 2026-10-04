@@ -1,6 +1,6 @@
-# Expense Tracker - Installment 3: The Tracker Does Math
+# Expense Tracker - Installment 2: Talking to the User
 # Author: Junsay, Geme Earl C.
-# A simple expense tracker that accepts two expenses and performs calculations.
+# A simple expense tracker that accepts two expenses from the user.
 
 print("=" * 40)
 print("\tEXPENSE TRACKER")
@@ -17,38 +17,21 @@ print()
 name = input("What's your name? ")
 print(f"Welcome, {name}! Let's log two expenses.")
 
-subtotal = 0
-
 item1 = input("First expense? ")
 amount1 = float(input("Amount? "))
-subtotal = subtotal + amount1
 
 item2 = input("Second expense? ")
 amount2 = float(input("Amount? "))
-subtotal = subtotal + amount2
 
-average = subtotal / 2
-
-tax_percent = float(input("Tax rate %? "))
-tax = subtotal * (tax_percent / 100)
-
-total = subtotal + tax
-
-budget = float(input("Your budget? "))
-over_budget = total > budget
-
-left = budget - total
+total = amount1 + amount2
+average = total / 2
 
 print()
 print("-" * 40)
 print("SUMMARY")
 print(f" - {item1}:\t${amount1}")
 print(f" - {item2}:\t${amount2}")
-print(f"Subtotal:\t${subtotal}")
+print(f"Total spent:\t${total}")
 print(f"Average:\t${average}")
-print(f"Tax ({tax_percent}%):\t${tax}")
-print(f"Grand total:\t${total}")
-print(f"Over budget?\t{over_budget}")
-print(f"Left in budget:\t${left}")
 print("-" * 40)
-print(f"Made by: {name} | Installment 3")
+print(f"Made by: {name} | Installment 2")
